@@ -14,7 +14,7 @@
 
 #### Note:
 - Ensure that your video is stored in videos directory.
-- Edit Env in ./run.sh, most importantly, the INPUT_FILE_PATH property.
+- Edit Env in ./run.sh, most importantly, the INPUT_FILE_PATH property & the OPENAI_API_KEY property
 
 ### Run the script
     chmod +x run.sh
