@@ -1,0 +1,7 @@
+version: "3"
+services:
+  my_project:
+    build: .
+    volumes:
+      - ./videos:/app/videos
+      - ./output:/app/output

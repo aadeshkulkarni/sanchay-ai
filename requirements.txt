@@ -1,0 +1,7 @@
+# Sanchay AI dependencies
+openai-whisper
+tiktoken
+openai
+
+# Other dependencies
+setuptools-rust
