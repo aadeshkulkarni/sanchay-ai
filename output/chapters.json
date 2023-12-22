@@ -1,1 +1,135 @@
-[{"title": "Introduction", "start": "00:00.000", "end": "00:29.840"}, {"title": "Working at a Web 3 Wallet", "start": "00:29.840", "end": "02:50.880"}, {"title": "Transition to AWS and Auto-Scaling", "start": "02:50.880", "end": "03:51.360"}, {"title": "NFT Mint Process", "start": "03:51.360", "end": "05:18.400"}, {"title": "Transition to Cryptocurrency Exchange", "start": "05:18.400", "end": "06:20.160"}, {"title": "Experiences with Rust and Finance Jargon", "start": "06:20.240", "end": "07:56.720"}, {"title": "React Native and Blockchain Indexing", "start": "07:56.720", "end": "09:39.280"}, {"title": "Monitoring Systems and Future Plans", "start": "09:39.280", "end": "10:45.120"}, {"title": "movement at this moment", "start": "10:45.120", "end": "10:53.520"}, {"title": "project in AI", "start": "10:53.520", "end": "11:03.280"}, {"title": "interest in fine-tuning models", "start": "11:03.280", "end": "11:14.800"}, {"title": "interest in decentralized finance", "start": "11:14.800", "end": "11:23.600"}, {"title": "interest in decentralized exchange", "start": "11:23.600", "end": "11:35.040"}, {"title": "interest in video streaming", "start": "11:39.120", "end": "12:18.160"}, {"title": "interest in scalable cloud execution engines", "start": "12:18.160", "end": "12:52.880"}, {"title": "concluding remarks", "start": "13:00.400", "end": "13:10.960"}]
+[
+  { "title": "Introduction", "start": "00:00", "end": "03:02" },
+  {
+    "title": "The Netflix Interview Process",
+    "start": "03:03",
+    "end": "05:56"
+  },
+  { "title": "The Interview", "start": "05:57", "end": "07:52" },
+  { "title": "Outro", "start": "07:53", "end": "07:52" },
+  {
+    "title": "I just got a fubbly objection letter.",
+    "start": "07:52.960",
+    "end": "07:54.160"
+  },
+  {
+    "title": "Obviously, you thought it was going to be a happy ending.",
+    "start": "07:54.160",
+    "end": "07:56.160"
+  },
+  {
+    "title": "I'm not the main character here.",
+    "start": "07:56.160",
+    "end": "07:57.520"
+  },
+  {
+    "title": "I was just a side character who finally died for a couple of months.",
+    "start": "07:57.600",
+    "end": "08:00.720"
+  },
+  {
+    "title": "And even if I did move on, I would have had to do a system design interview.",
+    "start": "08:00.720",
+    "end": "08:04.640"
+  },
+  {
+    "title": "And if I did that interview, I probably would have gotten banned from ever applying to Netflix again.",
+    "start": "08:04.640",
+    "end": "08:09.040"
+  },
+  {
+    "title": "I never studied anything about system design, so I had no idea what to do there.",
+    "start": "08:09.040",
+    "end": "08:13.120"
+  },
+  {
+    "title": "So I probably got saved from embarrassing myself even more.",
+    "start": "08:13.120",
+    "end": "08:16.160"
+  },
+  {
+    "title": "Now, while in the interview guide I got from Netflix, they said they care about your problem solving, but at the end of the day, it's a coding test.",
+    "start": "08:16.160",
+    "end": "08:18.640"
+  },
+  {
+    "title": "If you can't code it, why should you pass?",
+    "start": "08:18.640",
+    "end": "08:21.840"
+  },
+  {
+    "title": "Now, after this interview, even though it was a fail, I definitely learned a lot.",
+    "start": "08:22.880",
+    "end": "08:25.280"
+  },
+  {
+    "title": "I learned how to control my nerves better, make sure I knew my coding fundamentals, and improved how I managed my time during the interview.",
+    "start": "08:25.280",
+    "end": "08:33.040"
+  },
+  {
+    "title": "So here's my advice for you guys, so that it doesn't happen to you too.",
+    "start": "08:33.040",
+    "end": "08:38.480"
+  },
+  {
+    "title": "Don't let your nerves take over.",
+    "start": "08:38.480",
+    "end": "08:40.080"
+  },
+  {
+    "title": "I know it's really hard, but really try your best.",
+    "start": "08:40.080",
+    "end": "08:42.480"
+  },
+  {
+    "title": "Don't spend a majority of your time just talking about the solution.",
+    "start": "08:42.480",
+    "end": "08:45.680"
+  },
+  {
+    "title": "They're here to see you code.",
+    "start": "08:45.680",
+    "end": "08:47.040"
+  },
+  {
+    "title": "Now, it's perfectly fine to talk while you're coding, since it helps the interviewer see your approach while you're writing the code.",
+    "start": "08:47.040",
+    "end": "08:53.760"
+  },
+  {
+    "title": "But don't just talk and don't just code.",
+    "start": "08:53.760",
+    "end": "08:56.160"
+  },
+  {
+    "title": "Try to do both of them.",
+    "start": "08:56.160",
+    "end": "08:57.440"
+  },
+  {
+    "title": "My next piece of advice is try to get a solution.",
+    "start": "08:57.440",
+    "end": "09:00.160"
+  },
+  {
+    "title": "It doesn't have to be optimal.",
+    "start": "09:00.160",
+    "end": "09:01.760"
+  },
+  {
+    "title": "Just try to get some type of solution.",
+    "start": "09:01.760",
+    "end": "09:03.840"
+  },
+  {
+    "title": "In my last piece of advice, of course, don't forget how to use your dick.",
+    "start": "09:03.840",
+    "end": "09:06.960"
+  },
+  {
+    "title": "It's just embarrassing.",
+    "start": "09:06.960",
+    "end": "09:07.920"
+  }
+]
