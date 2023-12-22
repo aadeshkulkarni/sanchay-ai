@@ -15,6 +15,7 @@ INPUT_FILE = os.environ.get("INPUT_FILE_PATH")
 OUTPUT_PATH = os.environ.get("OUTPUT_DIR")
 
 
+
 # Set up our connection to the API.
 stability_api = client.StabilityInference(
     key=STABILITY_KEY, # API Key reference.
@@ -22,9 +23,11 @@ stability_api = client.StabilityInference(
     engine="stable-diffusion-xl-1024-v1-0", # Set the engine to use for generation.
 )
 
+
+
 # Set up our initial generation parameters.
 answers = stability_api.generate(
-    prompt="./videos/How I Failed My Netflix Interview.mp4",
+    prompt=INPUT_FILE,
     seed=4253978046, # If a seed is provided, the resulting generated image will be deterministic.
                      # What this means is that as long as all generation parameters remain the same, you can always recall the same image simply by generating it again.
                      # Note: This isn't quite the case for Clip Guided generations, which we'll tackle in a future example notebook.
@@ -50,4 +53,4 @@ for resp in answers:
                 "Please modify the prompt and try again.")
         if artifact.type == generation.ARTIFACT_IMAGE:
             img = Image.open(io.BytesIO(artifact.binary))
-            file_name = img.save(f'{INPUT_FILE}.png') # Save our generated images with their seed number as the filename.
+            img.save(f'{INPUT_FILE}.png') # Save our generated images with their seed number as the filename.
