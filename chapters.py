@@ -12,6 +12,7 @@ client = OpenAI()
 OPENAI_MODEL = os.environ.get("OPENAI_MODEL")
 MAX_TOKENS = os.environ.get("MAX_TOKENS")
 
+
 def split_vtt_file(file_path, MAX_TOKENS):
     chunks = []
     with open(file_path, "r") as file:

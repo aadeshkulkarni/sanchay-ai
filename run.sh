@@ -1,5 +1,5 @@
-export INPUT_FILE_PATH="./videos/video.mp4"
-export OPENAI_API_KEY=""
+export INPUT_FILE_PATH="./videos/How I Failed My Netflix Interview.mp4"
+export OPENAI_API_KEY="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"
 export OPENAI_MODEL="gpt-3.5-turbo-1106" 
 export MAX_TOKENS=15000
 export OUTPUT_TYPE="vtt" # options [txt, json, vtt, srt, tsv, all], logic supports vtt files only for now
