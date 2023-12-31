@@ -1,0 +1,473 @@
+WEBVTT
+
+00:00.000 --> 00:05.440
+All technologies I've learned in 2023, let me set some context here.
+
+00:05.440 --> 00:09.200
+I am 2018 Computer Science undergrad from IIT URK.
+
+00:09.200 --> 00:14.240
+After working in the industry for a few years, the last one year I've worked in two companies.
+
+00:14.240 --> 00:17.760
+For the first six months I worked at a web 3 wallet.
+
+00:17.760 --> 00:23.600
+For the next six months I worked at a crypto currency exchange, basically built from scratch with the company.
+
+00:23.600 --> 00:28.960
+I'm going to talk a little bit about my roles in both the places and what all technologies.
+
+00:29.280 --> 00:33.360
+Then I learned that we're new to me and I had not learned before I joined this company.
+
+00:33.360 --> 00:38.560
+Okay, let's get right into it. Let's roll the clock back around a year ago.
+
+00:38.560 --> 00:44.960
+October November is when I joined my first company, backpack which is a web 3 wallet.
+
+00:45.680 --> 00:49.520
+When I joined this company, the company was a thing six months into initiation or something.
+
+00:49.520 --> 00:54.880
+So there was a code base already there. I was actually contributing to the code base from the outside
+
+00:54.880 --> 00:58.960
+as an open source contributor and then that sort of converted into a full time role.
+
+00:59.600 --> 01:03.200
+When I joined these are the technologies that I learned over the next six months.
+
+01:03.200 --> 01:08.240
+Number one, building a Chrome extension. So backpack is a Chrome extension most
+
+01:08.240 --> 01:12.560
+wallet that you will see are some sort of an extension, but a Chrome extension fire for
+
+01:12.560 --> 01:16.480
+extension. The reason why this is they have to store private keys and they have to interact with
+
+01:16.480 --> 01:22.000
+something called be centralized applications or apps. For that reason they need to be an extension.
+
+01:22.080 --> 01:25.920
+I did not set this up. This was like already set up by the time I joined. So I did not spend too much
+
+01:25.920 --> 01:29.840
+time here, but very basic constructs knowing what a manifest file is. Things like these is something
+
+01:29.840 --> 01:34.800
+I learned for the first time when I joined backpack. Number two, scalable chat systems. I had
+
+01:34.800 --> 01:39.840
+done real time communication before this, which means how video goes from one person to another in a zoom
+
+01:39.840 --> 01:46.320
+call. I had not done like basic chat systems or you know, data transfer, but not at this scale.
+
+01:46.320 --> 01:51.520
+So I built the chat system from scratch and to build something like this, especially for it to handle
+
+01:51.600 --> 01:57.040
+a lot of scale, build it in a distributed fashion. So that you know, you can have multiple servers
+
+01:57.040 --> 02:02.080
+all around the world that relay this data in real time. That was a new challenge for me. I basically
+
+02:02.080 --> 02:07.920
+architected the whole chat system and put it out there for you know, a very big event of our
+
+02:07.920 --> 02:13.520
+doing, which the chat was sort of supposed to be spent. So that is something new challenging that
+
+02:13.520 --> 02:20.560
+I sort of did in these, I'd say was like a month that I spent doing this. Newer clouds. So you might have
+
+02:20.560 --> 02:27.760
+heard of AWS GCP and Azure. When I joined, I realized that there's a new fancy cloud technology
+
+02:27.760 --> 02:31.600
+that these guys use. So backpack, you're not use AWS for the longest time, eventually
+
+02:31.600 --> 02:36.160
+it did, but when I joined, it used something called fly, which basically is like a bunch of new
+
+02:36.160 --> 02:44.160
+companies that are coming up that are trying to replace AWS GCP by building much more developers
+
+02:44.160 --> 02:50.880
+centric developer friendly, one line deploy sort of clouds. They have their own data centers.
+
+02:50.880 --> 02:54.480
+They rent up a bunch of servers throughout have a very nice internal network of wires.
+
+02:55.040 --> 03:00.000
+And they're basically trying to replicate AWS on a smaller scale for some niche use case.
+
+03:00.000 --> 03:05.120
+Fly is one of those companies. That's what we had used at backpack and when I joined.
+
+03:06.080 --> 03:10.000
+And there's a sort of a new experience as to, okay, a production where the company has its
+
+03:10.000 --> 03:16.480
+cold deployed, not on the three giants, but on a new small startup, because you provide some
+
+03:16.480 --> 03:21.280
+benefits of ease of deploying and scaling up and scaling down things like this.
+
+03:21.280 --> 03:26.640
+Cool. Number four, auto scaling back it. So as I said, when I joined, we were using fly, but
+
+03:26.640 --> 03:31.840
+midway, it in a round, fifth to the ish is when I moved all the systems from fly to AWS. There were
+
+03:31.840 --> 03:36.640
+a few reasons for it. They were unstable from time to time and it just made sense to move to a
+
+03:36.720 --> 03:42.080
+more reliable partner right below before the mid, the mid happened in March or April something
+
+03:42.080 --> 03:46.080
+like that. Mint is like a big event that happened for us. And we had to make sure that the
+
+03:46.080 --> 03:51.360
+systems are really stable during that time. For that reason, we moved to AWS. When we moved to AWS,
+
+03:51.360 --> 03:55.680
+I learned not for the first time and then a little bit of this before, but you know how auto scaling
+
+03:55.680 --> 04:02.800
+system were built. So that if we receive a lot of traffic or systems auto scale. Cool. After that,
+
+04:03.200 --> 04:07.280
+one small thing I didn't really work on, but I learned because I looked at the code base was
+
+04:07.280 --> 04:12.160
+the actual logic to do with NFT Mint. If you don't understand this part, it's fine. It's a very
+
+04:12.160 --> 04:18.240
+web3 specific concept, which is whenever an NFT collection is released out in the world, you do something
+
+04:18.240 --> 04:21.920
+called the Mint. Mint basically means it's being released out in the world for the first time.
+
+04:21.920 --> 04:27.360
+And all the code to write that, all the code to prevent bots from hitting our servers when that happens.
+
+04:27.360 --> 04:31.840
+Was written by someone else, but I read through it just to understand how we were trying our best to,
+
+04:32.800 --> 04:38.560
+prevent attacks like this. There was a whole honeypot algorithm that was put there so that people
+
+04:38.560 --> 04:43.920
+who did try to bot, they would lose their money or so on. So they were like a bunch of complicated
+
+04:43.920 --> 04:49.200
+ad hoc logic there to prevent as much bots as we could. And another thing I learned,
+
+04:49.200 --> 04:54.640
+I did not implement, but learned doing this NFT Mint process was D to us attacks, which was
+
+04:54.640 --> 04:59.600
+denial of service attacks, basically a lot of people, a lot of what's trying to bring your server
+
+05:00.560 --> 05:04.160
+because they want to do something malicious specifically for us that was, they wanted to
+
+05:05.040 --> 05:09.760
+see all the NFTs or Mint all the NFTs. So they would try to build a bringer systems down
+
+05:09.760 --> 05:14.480
+during the NFT Mint. We had to make sure we were able to prevent that, so preventing a DDOS attack,
+
+05:14.480 --> 05:18.400
+is another new thing that I learned in the last one here. Cool. This is a checkpoint. The
+
+05:18.400 --> 05:23.200
+checkpoint is now well that this is a three-volet company for six months and these are at a high level
+
+05:23.200 --> 05:27.280
+of the things I've done. A lot of my work is open source, but you will see around March is when I
+
+05:27.360 --> 05:31.920
+stopped on pre-bitting to backpack. The reason was a new team was being created from inside.
+
+05:31.920 --> 05:37.920
+This company to create a new company, which was going to be a thriftocarn 6th since it was a stealth
+
+05:37.920 --> 05:42.000
+mode thingy, wasn't supposed to be released for the longest time. The exchange just got at
+
+05:42.000 --> 05:47.840
+least last month. Before that it was supposed to be a complete sort of under the radar stealth
+
+05:47.840 --> 05:52.320
+product for around six months. The team was really small initially when I joined March,
+
+05:53.200 --> 05:58.240
+there was just one more engineer out of that. Me, the CEO and I joined as the CISO. Two people in
+
+05:58.240 --> 06:02.800
+tech and then a bunch of complex compliance folks. And whatever we were building, we were building
+
+06:02.800 --> 06:09.520
+an exchange like Binance from scratch, which is a cryptocurrency exchange, not a stock exchange like
+
+06:09.520 --> 06:15.520
+Zero The Pure Web3 Cryptocurrency, currency centralized exchange. The first thing I learned here was
+
+06:15.520 --> 06:20.160
+Rust, never did this before, hurdle as a jargon, but whenever you're writing systems like these,
+
+06:20.240 --> 06:24.240
+like rating systems, you need them to be really fast for that. You need to reuse the language
+
+06:24.240 --> 06:28.560
+like C, C++ or Rust, Rust is the one that the team had a lot of experience in I did not.
+
+06:28.560 --> 06:34.320
+So one big thing I learned in these six months was how Rust, I built basically, basically normal
+
+06:34.320 --> 06:40.960
+HTTP apps in Rust, but most specifically, use cases like this, a trading system in Rust.
+
+06:42.000 --> 06:45.840
+The other thing I learned was a lot of finance, jargon, understanding how you build an exchange,
+
+06:45.920 --> 06:52.320
+how you build margin systems, on inside an exchange, how you handle a lot of people load,
+
+06:52.320 --> 06:54.960
+how do you bring down the server when you need to think these a bunch of things.
+
+06:55.600 --> 07:00.720
+Sandal finance jargon, that I should have learned in Goldman, but since I wasn't in the strategy
+
+07:00.720 --> 07:03.760
+when I did not here, I got a lot of the text post and as to how an exchange is built from scratch.
+
+07:05.280 --> 07:10.960
+Compliance, KYC bug stuff, so any exchange, but you know, that's the other way, so needs to have
+
+07:10.960 --> 07:15.760
+very strong compliance in place. So things like asking people for the KYC information, making sure
+
+07:15.760 --> 07:20.400
+that they're up to date, they're not presented in North Korea, or have not have a criminal record,
+
+07:20.400 --> 07:24.320
+things like these are the things you need to check before you actually onboard a user, all of this flow
+
+07:24.320 --> 07:28.400
+understanding, luckily you don't have to do one of this, a lot of this is just outsourced to other
+
+07:28.400 --> 07:33.440
+providers, but understanding how all of this is done for a core exchange, place where you need to be
+
+07:33.440 --> 07:38.160
+very regulated and compliant, make sure you actually let the people who have functions in.
+
+07:38.160 --> 07:41.600
+If there is a certain country that's blocked, you shouldn't let the users of that country in,
+
+07:41.600 --> 07:46.080
+where there's a certain country that's regulated a certain way, you need to make sure you ask
+
+07:46.080 --> 07:50.880
+those people what they're address, their social security number, things like these, so
+
+07:50.880 --> 07:56.720
+another new thing at NUMBERDAN for react natives. So as I said, it's like two different companies,
+
+07:56.720 --> 08:01.600
+officially for all purposes, wallet and exchange, but eventually we have two merge with the exchange
+
+08:01.600 --> 08:08.400
+into the wallet and this part was done by B. For the first time, I again wrote React native code.
+
+08:08.640 --> 08:16.000
+Again, here setting up a React native application from scratch and deploying it on the
+
+08:16.000 --> 08:21.040
+app store and place or as it's own set of challenges, I luckily did not do that, a lot of that was done,
+
+08:21.040 --> 08:26.240
+I just had to come and integrate the exchange into the mobile app. So I've run quite like a whole
+
+08:26.240 --> 08:32.000
+some experience of, I'm a React native engineer or a mobile engineer today, but I understand how to
+
+08:32.000 --> 08:36.320
+write it, which if you know React writing the React native with, you know, when you have existing components
+
+08:36.400 --> 08:41.440
+and a project or there is much easier. Blockchain's papers and indexes, so when you're building an
+
+08:41.440 --> 08:47.040
+exchange, you know, to allow people to deposit from their cold storage, from their crypto
+
+08:47.040 --> 08:50.800
+wallets and withdraw to their crypto wallets, for that you need to index the blockchain, what does that
+
+08:50.800 --> 08:55.120
+mean? Every transaction that is happening on the blockchain, you need to listen to it and if it is
+
+08:56.400 --> 09:01.520
+a transaction that interests you or is it transaction which is like a deposit inside the exchange
+
+09:01.520 --> 09:06.080
+for your customers, you need to make sure you actually carried the specific user. It's similar to
+
+09:06.080 --> 09:12.240
+someone goes to zero-tha and then puts 50,000-mile Google Pay, that 50,000 needs to show up in
+
+09:12.240 --> 09:18.480
+their zero-tha balance, similarly in the web 3 world, you can send bit coin from your one exchange,
+
+09:18.480 --> 09:23.520
+two other exchange or from your cold storage wallet, into the exchange, to make sure we actually
+
+09:23.520 --> 09:27.280
+carried you, we need to listen to the blockchain and make sure you know, every transaction is being
+
+09:27.280 --> 09:32.960
+monitored, building that whole indexing system was also something new, specifically loaded for Ethereum.
+
+09:33.840 --> 09:39.280
+And lastly monitoring systems, specifically very like, extremely needed for a system like this,
+
+09:39.280 --> 09:44.960
+to you know, to withdrawable very conciliation, whether a system is down, how much time is it taking
+
+09:44.960 --> 09:50.080
+for a trade to happen, things like these. So that was another new thing that I learned, I had never
+
+09:50.080 --> 09:55.040
+done before, cool. This is high level of what I did in the last one year, I had called it a combination
+
+09:55.040 --> 10:02.240
+of a lot of web 3 stuff, DevOps and low latency rating systems, that's the high level of the things
+
+10:02.320 --> 10:08.720
+that I've learned in the past one year. Next year, I have a plan of what to learn, a lot of times,
+
+10:08.720 --> 10:13.760
+most times, at least for me, learn in is what the company is doing, and I tend to like sort of
+
+10:14.560 --> 10:19.440
+target a slash work in ambitious companies where the stack that's being working, work down is
+
+10:19.440 --> 10:23.520
+something I've not worked on before. The next one, I think at the high level, this is what
+
+10:23.520 --> 10:27.840
+my learning is going to be, is good to totally 100% change based on, you know, what kind of projects I'm
+
+10:27.840 --> 10:33.760
+working on, number one in AI. Specifically, I feel I'll be working on, if I really go into the
+
+10:33.760 --> 10:40.960
+touch of it, a library like Langchene or AutoCIPT, basically high level H&DPI's, I feel is a place
+
+10:40.960 --> 10:45.120
+where, you know, there are a lot of companies and easy to get hired, and a lot of space to make
+
+10:45.120 --> 10:49.440
+movement at this moment, because you know, it's a raw empty market at the moment, and these are,
+
+10:49.440 --> 10:53.520
+this is a tweet by Gary Tan somewhere here, which basically talks about the same thing, this is the
+
+10:53.520 --> 10:56.480
+project to probably look at, if you're thinking of getting into AI.
+
+10:57.360 --> 11:03.280
+Fine-tuning models, neural networks, tensorflow, and generally large language models is something
+
+11:03.280 --> 11:08.560
+I'm interested in, I think that's one thing that I'm going to focus on for the next one year.
+
+11:09.600 --> 11:14.800
+We have three, I may, decentralized finance, I know, building most specific, so the most interesting
+
+11:14.800 --> 11:19.360
+part for 53 for me was D5, but did not get a lot of, you know, chance to work on it last year.
+
+11:20.160 --> 11:23.600
+This year, I want to, you know, understand, or at least try to build like,
+
+11:23.600 --> 11:27.200
+some variation of how do you build a D-centralized exchange, centralized exchange,
+
+11:27.200 --> 11:31.440
+and we centralized exchange is like significantly different, different, and how do you build
+
+11:31.440 --> 11:35.040
+an exchange that's, you know, not centralized and let's use for things like this,
+
+11:35.040 --> 11:38.240
+is another sort of interesting, challenging problem I feel, I might be spending my time on.
+
+11:39.120 --> 11:42.640
+Videos streaming, so I already know a bunch of videos streaming, how do you scale video at scale,
+
+11:42.640 --> 11:48.400
+but this comes from like a lot of motivation from we hired our first call recently, and I realized
+
+11:48.400 --> 11:52.560
+zoom, basically broke, not the video, but I feel eventually when I talked to people,
+
+11:52.560 --> 11:57.760
+it seemed like video was mostly fine, like a few pieces, but like when chat, broke a few people's
+
+11:57.760 --> 12:03.120
+machines was a lot of chat floating, you know, people's machines blew up, so I think there's a,
+
+12:04.160 --> 12:08.320
+I don't know if I want to bring it in house, it's a very challenging problem, but I've done
+
+12:08.320 --> 12:13.520
+about it, see, or like, we'll time video before, I feel it might be a solvable problem at least for
+
+12:14.240 --> 12:18.160
+the small subset of people that we have right now, that's another one, and last these
+
+12:18.160 --> 12:21.600
+scalable cloud execution engines, so this basically is something like replete, replete is
+
+12:21.680 --> 12:26.880
+another thing that we broke during our first life class, so I feel I want to bring a lot of these
+
+12:26.880 --> 12:32.080
+systems in house for our cohorts, so for that reason I think I'll be building a few of these systems,
+
+12:32.080 --> 12:35.760
+in the year to come, which is why I feel my learning will peak here, a lot of these things I don't
+
+12:35.760 --> 12:40.880
+know very well, for example, scalable cloud execution engines, I've done it a little bit before,
+
+12:40.880 --> 12:44.160
+but if you want to do it at the level of replete, which means, you know, you support a bunch of
+
+12:44.160 --> 12:48.160
+stacks, and there are a thousand other challenges that will come in building, who's to like this,
+
+12:48.240 --> 12:52.880
+I think, will be a challenging problem, and I think this, when you see this update video from
+
+12:52.880 --> 13:00.400
+2021, you'll see me working on something in this spectrum of things I've talked about, cool,
+
+13:00.400 --> 13:04.480
+that was all for the video, hopefully it was in a title video, let me know if there's something
+
+13:04.480 --> 13:07.360
+you want to learn from all of these technologies and anything specific that's not out there,
+
+13:07.360 --> 13:10.960
+happy to put a video on that, with that, let's send it as you guys in the next one, bye bye.
+
