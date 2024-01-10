@@ -1,22 +1,13 @@
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI, Depends, UploadFile, Response
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
-from typing import List, Annotated
-import models
-from database import engine, SessionLocal
-from sqlalchemy.orm import Session
+import os
+import sys
+from scripts.subtitles import generate_subtitles
+root_path = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.append(root_path)
 
 app = FastAPI()
-models.Base.metadata.create_all(bind=engine)
-
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
-    
-
-db_dependency = Annotated[Session, Depends(get_db)]
 
 
 @app.get("/_readyz")
@@ -25,34 +16,21 @@ def read_root():
     return {"status": "ok"}
 
 
-class Needs(BaseModel):
-    transcoding: bool
-    subtitles: bool
-    thumbnails: bool
+@app.post("/subtitles")
+def create_subtitles(video_name: str, file: UploadFile):
+    if not os.path.exists("videos"):
+        os.makedirs("videos")
 
+    file_path = f"videos/{video_name}.mp4"
+    with open(file_path, "wb") as f:
+        f.write(file.file.read())
 
-class Project(BaseModel):
-    project: str
-    videoURL: str
-    needs: Needs
+    if not file.content_type.startswith("video/"):
+        return {"error": "Invalid file type. Only video files are allowed."}
 
-
-@app.get("/projects")
-async def read_projects(db:db_dependency):
-    result = db.query(models.Projects).all()
-    return result
-
-@app.post("/generate-all")
-async def create_project(project:Project, db: db_dependency):
-    # Step 1: Insert project into db
-    db_project = models.Projects(project=project.project, videoURL=project.videoURL, needTranscoding=project.needs.transcoding, needSubtitles=project.needs.subtitles, needThumbnails=project.needs.thumbnails)
-    db.add(db_project)
-    db.commit()
-    db.refresh(db_project)
-
-    # Step 2: Generate transcoding
-
-    # Step 3: Upload to bucket
-
-    # Step 4: Update table with bucket
-    return project
+    if not os.path.exists("output"):
+        os.makedirs("output")
+    output_path = generate_subtitles(file_path,"vtt","./output",video_name)
+    response = FileResponse(output_path, media_type="text/vtt", filename=f"{video_name}.vtt")
+    response.headers["Content-Disposition"] = f"attachment; filename={video_name}.vtt"
+    return response
