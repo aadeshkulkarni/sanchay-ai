@@ -1,0 +1,10 @@
+.git
+.results
+scripts
+*Dockerfile*
+node_modules
+.dockerignore
+.gitignore
+.next
+out
+public

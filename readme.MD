@@ -1,41 +1,78 @@
 # Sanchay AI
-- Sanchay is a Sanskrit word that means `collection` or `accumulation`. 
-- We think that It is a fitting name for this project because it captures the `essence` of what it does - it takes a video and collects its key elements (`transcription, subtitles, and video chapters`) in an organized and easily accessible manner. 
-- It's like creating a collection of information from a single source, making it more useful and convenient to work with. The name Sanchaya also has a nice ring to it.
-- Sanchay-AI internally uses `Whisper` and `OpenAI` to achieve this feat.
 
-## Project Setup
+    Upload your video and SanchayAI will generate key elements (video transcription, video subtitles, and video chapters) in an organized and easily accessible manner using Generative AI.
 
-> Pre-requisite: Python
+### Project Status and Contribution Potential
 
-### Install openai-Whisper
-    pip install -U openai-whisper
+This project is in its infancy and has just been scaffolded with a new architecture. It's at a crucial stage where contributions can significantly shape its future and scalability. With the right environment and collaborative effort, it has the potential to evolve into something truly remarkable.
 
-### Install ffmpeg
-    brew install ffmpeg
-
-### Install setuptools-rust
-    pip install setuptools-rust
-
-### Install tiktoken
-    pip install --upgrade tiktoken
-
-#### Note:
-- Ensure that your video is stored in `videos directory`.
-- Edit Env in `./run.sh`, most importantly, the `INPUT_FILE_PATH` property & the `OPENAI_API_KEY` property
-
-### Run the script
-    chmod +x run.sh
-    ./run.sh
+### System (In a nutshell)
+![System](/docs/system.png)
 
 
-### Environment Variables
+### Requirements:
+- MongoDB
+- RabbitMQ
+- Localstack
 
-| Key | Description |
-| --- | --- |
-| INPUT_FILE_PATH | Video file path |
-| OPENAI_API_KEY |  https://platform.openai.com/api-keys |
-| OPENAI_MODEL | https://platform.openai.com/docs/models |
-| MAX_TOKENS | This is used to split the subtitles into chunks of MAX_TOKENS. MAX_TOKENS should be 4/5th of your OPENAI_MODEL's max tokens |
-| OUTPUT_TYPE | options [txt, json, vtt, srt, tsv, all], logic supports vtt files only for now |
-| OUTPUT_DIR | Directory where output will be stored |
+
+There are 2 apps:
+
+1. web-app
+- This is a fullstack NextJS app. 
+- The project depends on 3 services:
+    - RabbitMQ
+    - Localstack
+    - MongoDB
+
+2. worker
+- This is a Python based RabbitMQ worker that listens to request from web-app and processes them in the background.
+- The project also depends on 3 services:
+    - RabbitMQ
+    - Localstack
+    - MongoDB
+
+
+### Setup
+
+Before setting up the codebase, it's important to setup the services the codebase depends on.
+
+### Setup RabbitMQ locally
+- If you have docker installed on your system, you can setup RabbitMQ using the command
+    - `docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.13-management`
+    - This will spinup RabbitMQ on localhost:15672 (default username/password = guest/guest)
+> OR
+
+- If you don't want to setup using docker, you can setup RabbitMQ by following steps [here](https://www.rabbitmq.com/docs/download)
+
+### Setup MongoDB
+- Recommended: Create a database cluster on https://cloud.mongodb.com/ for free and use the connection string
+
+### Localstack
+- Follow the guide mentioned here- https://app.localstack.cloud/getting-started
+- Create a new bucket by running the command `aws s3 mb s3://sanchayai --endpoint-url=http://localhost:4566`
+
+Once the above services are up, clone the sanchay-ai repository
+
+### Worker setup
+- cd into apps/worker folder
+- follow readme instructions
+- pip install
+- python consumer.py
+
+### Web-app setup
+- cd into apps/web-app folder
+- follow readme instructions
+- npm install
+- npm run dev
+
+If all is working well,
+- Your Web-app should be listening on `localhost:3000`
+- Your Rabbit-MQ should be working on `http://localhost:15672/`
+- Your localstack should be working on `http://localhost:4566` (nothing to display on chrome here)
+
+
+You can run the app and upload a test video which is available in the codebase here - ./docs/video.mp4
+
+![Home](/docs/app-1.png)
+![Videos](/docs/app-2.png)
