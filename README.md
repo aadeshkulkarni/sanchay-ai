@@ -1,6 +1,6 @@
-# Sanchay AI
+# Sanchay AI (A Generative AI app)
 
-    Upload your video and SanchayAI will generate key elements (video transcription, video subtitles, and video chapters) in an organized and easily accessible manner using Generative AI.
+Upload your video and SanchayAI will generate key elements (video transcription, video subtitles, and video chapters) in an organized and easily accessible manner.
 
 ### Project Status and Contribution Potential
 
