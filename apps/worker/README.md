@@ -34,5 +34,5 @@ We recommend using `venv` for Virtual environment. You can read this article to 
 ### 3. Setup Env Variables
     - copy .env.example and rename it to .env
     - OPENAI_API_KEY= (required, get the API key from https://platform.openai.com/api-keys)
-    - GOOGLE_API_KEY= (optional, get the API key from https://ai.google.dev/gemini-api/docs/api-key)
+    - GOOGLE_API_KEY= (required, get the API key from https://ai.google.dev/gemini-api/docs/api-key)
     - MONGO_DB= (required, get the key from https://cloud.mongodb.com/)
